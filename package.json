@@ -4,10 +4,10 @@
   "description": "A simple codeing example",
   "main": "index.js",
   "scripts": {
-    "start": "node index",
+    "start": "npm run dist && node index",
     "test": "NODE_ENV=test jest",
     "coverage": "NODE_ENV=test jest --coverage",
-    "dist": "NODE_ENV=production webpack -p",
+    "dist": "webpack -p",
     "heroku": "npm run dist && npm start"
   },
   "repository": {

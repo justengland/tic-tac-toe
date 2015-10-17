@@ -2,7 +2,6 @@ var webpack = require('webpack');
 
 var path = require('path');
 var objectAssign = require('object-assign');
-
 var NODE_ENV = process.env.NODE_ENV;
 
 var env = {
@@ -52,7 +51,8 @@ module.exports = {
     ],
 
     loaders: [
-      {test: /\.scss$/, loader: 'style!css!autoprefixer?browsers=last 2 version!sass?outputStyle=expanded'}
+      {test: /\.scss$/, loader: 'style!css!autoprefixer?browsers=last 2 version!sass?outputStyle=expanded'},
+      {test: /\.jsx$/, loader: 'babel', exclude: /node_modules/}
     ],
 
     noParse: /\.min\.js/
